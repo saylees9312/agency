@@ -31,7 +31,7 @@
     padding: 1rem 2rem;
 }
 
-.btn-login {
+nav button[type="button"] {
     width: 4rem;
     height: 4rem;
     border: 1px solid var(--white50p);
@@ -42,6 +42,10 @@
     align-items: center;
     color: #fff;
     font-size: 2rem;
+}
+
+.btn-menu {
+    display: none !important;
 }
 
 .sec-title {
@@ -77,8 +81,8 @@
     text-align: center;
     color: #fff;
     z-index: 1;
-
     width: 113rem;
+    width: 59.3799%;
 }
 
 .Video-title h2 {
@@ -125,6 +129,8 @@
 
 .about figure {
     margin-top: 4.3rem;
+    width: 88rem;
+    width: 100%;
 }
 
 .about figure + p {
@@ -152,6 +158,7 @@
 
 .team-slider .swiper-slide {
     width: 28rem;
+    width: 23.7288%;
     min-height: 33rem;
     /* border: 1px solid #000; */
 }
@@ -163,6 +170,7 @@
 
 .team-slider .swiper-wrapper figure {
     width: 24rem;
+    width: 85.7143%;
     aspect-ratio: 1/1;
     /* border: 1px solid red; */
     border-radius: 50%;
@@ -201,6 +209,7 @@
 
 .work-new {
     width: 48rem;
+    width: 40.678%;
 }
 
 .work-new h4 {
@@ -216,6 +225,7 @@
 
 .wolk-list {
     width: 68rem;
+    width: 57.6271%;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -223,11 +233,13 @@
 
 .wolk-list li {
     width: 33rem;
+    width: 48.5294%;
     height: 24.2rem;
 }
 
 .form-wrap {
     width: 48.8rem;
+    width: 41.3559%;
     height: 5.4rem;
     border: 1px solid var(--main-color);
     border-radius: var(--rds);
@@ -302,4 +314,138 @@
     width: 4.8rem;
     height: 4.8rem;
     border-radius: 50%;
+}
+
+/* .inner의 크기에 따른 분기점 */
+
+@media screen and (max-width: 1180px) {
+    .inner {
+        width: 90%; /* 임시 */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .inner {
+        width: 96.4rem;
+        width: 94.1406%;
+    }
+
+    .Video {
+        aspect-ratio: 1/0.478515625;
+    }
+
+    .Video-title {
+        width: 71.4rem;
+        width: 69.7266%;
+        background: red;
+    }
+    .Video-title p {
+        padding: 0 5.7rem;
+    }
+    .about .inner {
+        padding: 0;
+    }
+    .work-wrap {
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+    .work-new {
+        width: 100%;
+    }
+    .wolk-list {
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .wolk-list li {
+        width: 23rem;
+        width: 23.8589%;
+        height: initial; /* initial, auto */
+    }
+    .form-wrap {
+        width: 48.8rem;
+        width: 50.6224%;
+    }
+    .map-wrap {
+        /* height: 84.6rem; */
+        height: initial;
+        aspect-ratio: 1/0.826171875;
+    }
+}
+
+/* 모바일 디자인 */
+
+@media screen and (max-width: 390px) {
+    .inner {
+        width: 89.7436%;
+    }
+
+    #header nav {
+        height: 6.8rem;
+    }
+    .logo a {
+        display: block;
+        width: 3rem;
+    }
+    .gnb {
+        display: none;
+    }
+    .btn-menu {
+        display: flex !important;
+        margin-left: auto;
+        margin-right: 1.2rem;
+    }
+
+    .Video {
+        aspect-ratio: 1/1.3846;
+    }
+    .Video-title {
+        width: 89.7436%;
+    }
+    .Video-title h2 {
+        font-size: 3.2rem;
+    }
+    .Video-title p {
+        font-size: 1.8rem;
+        padding: 0;
+    }
+
+    .about figure {
+        aspect-ratio: 1;
+    }
+    .about figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wolk-list {
+        flex-direction: column;
+        gap: 2.1rem;
+    }
+    .wolk-list li {
+        width: 100%;
+    }
+    .form-wrap {
+        width: 100%;
+    }
+    .form-wrap button {
+        width: 8rem;
+        flex-shrink: 0;
+    }
+    .form-wrap button::before {
+        content: "\F0D7";
+        font-family: remixicon;
+    }
+
+    .form-wrap button b {
+        display: none;
+    }
+    .map-wrap {
+        aspect-ratio: 1/1.3538;
+    }
+    #footer .inner {
+        flex-direction: column;
+        gap: 2.8rem;
+    }
 }
