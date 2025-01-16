@@ -48,10 +48,19 @@ body {
     color: var(--text-color);
     word-break: keep-all;
     text-transform: capitalize; /* ttc:영문 시작글자만 대문자로 */
+    min-width: 320px;
+}
+
+figure {
+    width: 100%;
+    height: 100%;
 }
 
 img {
     max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .inner {
